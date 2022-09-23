@@ -26,6 +26,28 @@ public class Doubly_linklist {
         return temp;
     }
 
+    static Node remfront(Node head){
+        Node temp  = head.next;
+        head = temp;
+        return head;
+    }
+
+    static Node addend(Node head , int val){
+        if(head== null){
+            return null;
+        }
+
+        Node curr = head;
+        while(curr.next!=null){
+            curr= curr.next;
+        }
+        Node temp = new Node(val);
+        temp.prev = curr;
+        curr.next = temp;
+        return head;
+    }
+
+
     static Node remendlink(Node head){
         if( head == null ){
             return null;
@@ -50,6 +72,12 @@ public class Doubly_linklist {
         }
 
     }
+
+    static Node reverse(Node head){
+
+        return  head;
+    }
+
     public static void main(String[]arg){
         Node head = new Node(10);
          head = addfront(head , 20);
@@ -57,12 +85,13 @@ public class Doubly_linklist {
          head = addfront(head ,40);
          head = addfront(head , 50);
          head = addfront(head ,60);
-//        System.out.println(head.data);
-        head = addfront(head , 100);
-//        System.out.println(head.data);
-//        System.out.println(head.next.data);
-        remendlink(head);
-//        System.out.println(head.data);
+        head =  addfront(head , 100);
+        head = addend(head , 0);
+        head = remfront(head);
+        head = remendlink(head);
+
+
+
 
         traverselink(head);
 
