@@ -25,7 +25,7 @@ int count = 0;
             col1--;
         }
 //        System.out.println("");
-        // for checking from the index to bottom right corner
+        // for checking from the index to bottom right corner hello folks
         int col2 = indexcol;
         for(int row  = indexrow ; row<array.length&& col2<array.length; row++){
 //            System.out.println(array[row][col2]);
